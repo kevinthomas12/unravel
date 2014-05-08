@@ -1,4 +1,4 @@
-﻿@using System.Web.Optimization
+@using System.Web.Optimization
 @using BootstrapSupport
 @using NavigationRoutes
 <!DOCTYPE html>
@@ -35,7 +35,6 @@
             @Html.Partial("_validationSummary")
             @RenderBody()   
             <hr>
-            @RenderSection("featured", required: false)
             <footer>
                 <p>&copy; Company @System.DateTime.Now.ToString("yyyy")</p>
             </footer> 
