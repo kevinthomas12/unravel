@@ -6128,6 +6128,14 @@ a.badge:focus {
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;
           border-radius: 6px;
+    /* Fallback for web browsers that doesn't support RGBa */
+    background: rgb(255, 255, 255);
+    /* RGBa with 0.6 opacity */
+    background: rgba(255, 255, 255, 0.6);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#ffffff);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#ffffff)";
 }
 
 .hero-unit h1 {
@@ -6136,6 +6144,7 @@ a.badge:focus {
   line-height: 1;
   letter-spacing: -1px;
   color: inherit;
+  opacity: 1 !important;  
 }
 
 .hero-unit li {
